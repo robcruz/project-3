@@ -8,10 +8,6 @@ import debugLib from 'debug';
 import http from 'http';
 const debug = debugLib('your-project-name:server');
 
-// var app = require('../app');
-// var debug = require('debug')('poc-express:server');
-// var http = require('http');
-
 /**
  * Get port from environment and store in Express.
  */
