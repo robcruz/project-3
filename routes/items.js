@@ -46,7 +46,7 @@ router.post('/', async (req, res) => {
 // @access  Public
 router.put('/:id', async (req, res) => {
   try {
-    const updatedStudent = await Items.findByIdAndUpdate(req.params.id, req.body);
+    const itemUpdated = await Items.findByIdAndUpdate(req.params.id, req.body);
      res.send({ message: 'The item was updated' });
   } catch(err) {
     res.status(400).send({ error: err });
