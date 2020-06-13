@@ -73,6 +73,18 @@ class EditItem extends Component {
             className="Edit-Item-Input"
             id="email"
           />
+          <label htmlFor="itemNumber">Item Count:</label>
+          <input
+              type="text"
+              placeholder="Enter item count here"
+              value={this.state.itemNumber}
+              name="itemNumber"
+              required
+              onChange={this.onChangeHandler}
+              ref="itemNumber"
+              className="Edit-Item-Input"
+              id="email"
+          />
           <button type="submit" className="Edit-Item-Submit fa fa-pencil"></button>
         </form>
         <ToastContainer />
