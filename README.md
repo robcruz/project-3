@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # swap-me
+=======
+# Swap-me
+>>>>>>> 060ecc968460d1013b8075b5119a35a4d6c024c9
 
 This is a simple crud project for beginners built with the following technologies:
 
