@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import './EditStudent.css';
+import './EditItem.css';
 import axios from "axios";
 import { withRouter } from 'react-router'
 import { toast, ToastContainer } from "react-toastify";
 
-class EditStudent extends Component {
+class EditItem extends Component {
   state = {
     id: '',
     name: "",
     email: "",
-    enrollnumber: "",
+    itemNumber: "",
     response: ""
   };
 
@@ -19,23 +19,23 @@ class EditStudent extends Component {
     try {
       let search = this.props.location.search,
         id = search.substring(1, search.length);
-      const updateStudent = await axios(`/api/students/${id}`);
-      const { name, email, enrollnumber } = updateStudent.data.student;
-      this.setState({ id, name, email, enrollnumber });
+      const updateItem = await axios(`/api/items/${id}`);
+      const { name, email, itemNumber } = updateItem.data.item;
+      this.setState({ id, name, email, itemNumber });
     } catch (err) {
-      this.setState({ response: "Student not found!" })
+      this.setState({ response: "Item not found!" })
     }
   };
 
   updateStudentHandler = async (e) => {
     e.preventDefault();
     try {
-      const student = await axios.put(`/api/students/${this.state.id}`, {
+      const item = await axios.put(`/api/items/${this.state.id}`, {
         name: this.refs.name.value,
         email: this.refs.email.value,
-        enrollnumber: this.refs.enrollnumber.value
+        itemNumber: this.refs.itemNumber.value
       });
-      toast(student.data.message, { type: toast.TYPE.INFO, autoClose: 3000 });
+      toast(item.data.message, { type: toast.TYPE.INFO, autoClose: 3000 });
 
     } catch (err) {
       toast(err.message, { type: toast.TYPE.ERROR, autoClose: 3000 });
@@ -46,7 +46,7 @@ class EditStudent extends Component {
     if (this.state.response === "Item not Found")
       return <h1>Item Not Found!</h1>
     return (
-      <div className="Edit-Student-Wrapper">
+      <div className="Edit-Item-Wrapper">
         <h1>Edit Your Item</h1>
         <form onSubmit={this.updateStudentHandler}>
           <label htmlFor="name">Item Name</label>
@@ -58,7 +58,7 @@ class EditStudent extends Component {
             onChange={this.onChangeHandler}
             ref="name"
             required
-            className="Edit-Student-Input"
+            className="Edit-Item-Input"
             id="name"
           />
           <label htmlFor="email">Email:</label>
@@ -70,10 +70,10 @@ class EditStudent extends Component {
             required
             onChange={this.onChangeHandler}
             ref="email"
-            className="Edit-Student-Input"
+            className="Edit-Item-Input"
             id="email"
           />
-          <button type="submit" className="Edit-Student-Submit fa fa-pencil"></button>
+          <button type="submit" className="Edit-Item-Submit fa fa-pencil"></button>
         </form>
         <ToastContainer />
       </div>
@@ -81,4 +81,4 @@ class EditStudent extends Component {
   }
 }
 
-export default withRouter(EditStudent);
+export default withRouter(EditItem);

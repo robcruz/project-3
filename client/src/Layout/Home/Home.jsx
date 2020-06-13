@@ -3,72 +3,72 @@ import "./Home.css";
 import axios from "axios";
 import { PropagateLoader } from 'react-spinners';
 // Components
-import Student from "../../components/Student/Student";
-import SearchStudents from "../../components/SearchStudent/SearchStudents";
+import Item from "../../components/Item/Item";
+import SearchItems from "../../components/SearchItem/SearchItems";
 
 class Home extends Component {
   state = {
     data: null,
-    allStudents: null,
+    allItems: null,
     error: ""
   };
 
   async componentDidMount() {
     try {
-      const students = await axios("/api/students/");
-      this.setState({ data: students.data });
+      const items = await axios("/api/items/");
+      this.setState({ data: items.data });
     } catch (err) {
       this.setState({ error: err.message });
     }
   }
 
-  removeStudent = async id => {
+  removeItem = async id => {
     try {
-      const studentRemoved = await axios.delete(`/api/students/${id}`);
-      const students = await axios("/api/students/");
-      this.setState({ data: students.data });
+      const studentRemoved = await axios.delete(`/api/items/${id}`);
+      const items = await axios("/api/items/");
+      this.setState({ data: items.data });
     } catch (err) {
       this.setState({ error: err.message });
     }
   };
 
-  searchStudents = async username => {
-    let allStudents;
-    allStudents = [...this.state.data.students];
-    if (this.state.allStudents === null) this.setState({ allStudents });
+  searchItems = async username => {
+    let allItems;
+    allItems = [...this.state.data.items];
+    if (this.state.allItems === null) this.setState({ allItems: allItems });
 
-    let students;
+    let items;
 
-    students = this.state.data.students.filter(({ name }) =>
+    items = this.state.data.items.filter(({ name }) =>
       name.toLowerCase().includes(username.toLowerCase())
     );
 
-    if (students.length > 0) this.setState({ data: { students } });
+    if (items.length > 0) this.setState({ data: { items: items } });
 
     if (username.trim() === "")
-      this.setState({ data: { students: this.state.allStudents } });
+      this.setState({ data: { items: this.state.allItems } });
   };
 
   render() {
-    let students;
+    let items;
 
     if (this.state.data)
-      students =
-        this.state.data.students &&
-        this.state.data.students.map(student => (
-          <Student key={student._id} {...student} removeStudent={this.removeStudent} />
+      items =
+        this.state.data.items &&
+        this.state.data.items.map(item => (
+          <Item key={item._id} {...item} removeItem={this.removeItem} />
         ));
     else return <div className="Spinner-Wrapper"> <PropagateLoader color={'#333'} /> </div>;
 
     if (this.state.error) return <h1>{this.state.error}</h1>;
     if (this.state.data !== null)
-      if (!this.state.data.students.length)
+      if (!this.state.data.items.length)
         return <h1 className="No-Students">No Item(s)</h1>;
 
     return (
       <div className="Table-Wrapper">
         <h1>Check Out the Latest Deals, Here!</h1>
-        <SearchStudents searchStudents={this.searchStudents} />
+        <SearchItems searchStudents={this.searchItems} />
         <table className="Table">
           <thead>
             <tr>
@@ -78,7 +78,7 @@ class Home extends Component {
               <th>Options</th>
             </tr>
           </thead>
-          <tbody>{students}</tbody>
+          <tbody>{items}</tbody>
         </table>
       </div>
     );

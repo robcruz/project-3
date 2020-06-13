@@ -1,11 +1,11 @@
-.AddStudent-Wrapper {
+.AddItem-Wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.Add-Student-Input {
+.Add-Item-Input {
     padding: 4px 11px;
     width: 55vw;
     height: 32px;
@@ -18,8 +18,8 @@
     outline: none;
 }
 
-.Add-Student-Submit,
-.Add-Student-Reset {
+.Add-Item-Submit,
+.Add-Item-Reset {
     width: 45px;
     height: 40px;
     color: #fff;
@@ -30,11 +30,11 @@
     outline: none;
 }
 
-.Add-Student-Submit {
+.Add-Item-Submit {
     background-color: #3b3b3b;
 }
 
-.Add-Student-Reset {
+.Add-Item-Reset {
     background-color: rgb(163, 163, 163);
 }
 

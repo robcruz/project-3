@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './AddStudent.css';
+import './AddItem.css';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-class AddStudent extends Component {
+class AddItem extends Component {
   state = {
     name: '',
     email: '',
@@ -13,17 +13,17 @@ class AddStudent extends Component {
 
   onChangeHandler = e => this.setState({ [e.target.name]: e.target.value });
 
-  addStudent = async e => {
+  addItem = async e => {
     e.preventDefault();
     try {
-      const newStudent = await axios.post('/api/students/', {
+      const newItem = await axios.post('/api/items/', {
         name: this.refs.name.value,
         email: this.refs.email.value,
-        enrollnumber: this.refs.enrollnumber.value,
+        itemNumber: this.refs.itemNumber.value,
       });
 
       toast(
-        'Item ' + newStudent.data.newStudent.name + ' Ready to be Swapped',
+        'Item ' + newItem.data.newItem.name + ' Ready to be Swapped',
         { type: toast.TYPE.SUCCESS, autoClose: 3000 }
       );
     } catch (err) {
@@ -33,9 +33,9 @@ class AddStudent extends Component {
 
   render() {
     return (
-      <div className='AddStudent-Wrapper'>
+      <div className='AddItem-Wrapper'>
         <h1>Swap Your Item Here!</h1>
-        <form onSubmit={this.addStudent}>
+        <form onSubmit={this.addItem}>
           <label htmlFor='name'>Item Name</label>
           <input
 
@@ -43,7 +43,7 @@ class AddStudent extends Component {
 
             onChange={this.onChangeHandler}
             ref='name'
-            className='Add-Student-Input'
+            className='Add-Item-Input'
             required
 
             maxLength='120'
@@ -58,26 +58,26 @@ class AddStudent extends Component {
             onChange={this.onChangeHandler}
             ref='email'
             pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
-            className='Add-Student-Input'
+            className='Add-Item-Input'
             required
             id='email'
           />
-          <label htmlFor='enrollnumber'>How Many Items... </label>
+          <label htmlFor='itemNumber'>How Many Items... </label>
           <input
             max='120'
             onChange={this.onChangeHandler}
-            ref='enrollnumber'
-            className='Add-Student-Input'
+            ref='itemNumber'
+            className='Add-Item-Input'
             required
-            id='enrollnumber'
+            id='itemNumber'
           />
           <button
             type='submit'
-            className='Add-Student-Submit fa fa-plus'
+            className='Add-Item-Submit fa fa-plus'
           ></button>
           <button
             type='reset'
-            className='Add-Student-Reset fa fa-refresh'
+            className='Add-Item-Reset fa fa-refresh'
           ></button>
         </form>
         <ToastContainer />
@@ -86,4 +86,4 @@ class AddStudent extends Component {
   }
 }
 
-export default AddStudent;
+export default AddItem;

@@ -1,11 +1,11 @@
-.Edit-Student-Wrapper {
+.Edit-Item-Wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.Edit-Student-Input {
+.Edit-Item-Input {
   padding: 4px 11px;
   width: 55vw;
   height: 32px;
@@ -18,7 +18,7 @@
   outline: none;
 }
 
-.Edit-Student-Submit {
+.Edit-Item-Submit {
   background-color: #3833A5;
   width: 45px;
   height: 40px;
