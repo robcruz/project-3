@@ -8,6 +8,9 @@ const itemsSchema = new mongoose.Schema({
     maxlength: 33,
     trim: true
   },
+  itemNumber: {
+    type: Number
+  },
   email: {
     type: String,
     required: true,
@@ -19,3 +22,4 @@ module.exports = mongoose.model('items', itemsSchema);
 
 
 
+// itemNumber
