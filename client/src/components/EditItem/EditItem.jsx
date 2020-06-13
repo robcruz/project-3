@@ -27,7 +27,7 @@ class EditItem extends Component {
     }
   };
 
-  updateStudentHandler = async (e) => {
+  updateItemHandler = async (e) => {
     e.preventDefault();
     try {
       const item = await axios.put(`/api/items/${this.state.id}`, {
@@ -48,7 +48,7 @@ class EditItem extends Component {
     return (
       <div className="Edit-Item-Wrapper">
         <h1>Edit Your Item</h1>
-        <form onSubmit={this.updateStudentHandler}>
+        <form onSubmit={this.updateItemHandler}>
           <label htmlFor="name">Item Name</label>
           <input
             type="text"
