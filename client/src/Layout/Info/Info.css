@@ -1,0 +1,117 @@
+.Table-Wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info {
+    text-align: center;
+    width: 80%;
+    font-size: 20px;
+}
+
+.Collapsible {
+    background-color: rgb(177, 177, 177);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+}
+
+.active,
+.Collapsible:hover {
+    background-color: rgb(131, 131, 131);
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #d8d8d8;
+}
+
+h1 {
+    color: rgb(34, 34, 34);
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.namestyle {
+    position: relative;
+    animation: mymove 1.9s;
+    z-index: -1;
+}
+
+@keyframes mymove {
+    from {
+        left: -200px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
+button {
+    background-color: rgb(71, 71, 71);
+    padding: 10px;
+    color: white;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.btn.sendbtn {
+    align-items: center;
+    margin: 50px;
+}
