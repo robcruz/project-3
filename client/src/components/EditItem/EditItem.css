@@ -33,3 +33,19 @@
 .chatcontainer {
     background-color: aqua;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(24, 24, 24);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(83, 83, 83);
+}
