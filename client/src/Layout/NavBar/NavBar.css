@@ -5,12 +5,12 @@
     align-items: center;
     height: 50px;
     background: rgb(255, 255, 255);
-    background: linear-gradient( 90deg, rgba(255, 255, 255, 1) 8%, rgba(38, 38, 38, 1) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 8%, rgba(38, 38, 38, 1) 100%);
 }
 
 .NavBar-Title {
     font-weight: bold;
-    padding-left: 1rem;
+    float: left;
 }
 
 .NavBar-Link {
