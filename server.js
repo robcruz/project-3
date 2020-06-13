@@ -1,8 +1,11 @@
 const express = require('express');
-const socket = require('socket.io');
 
 const bodyParser = require('body-parser');
+const socket = require('socket.io');
+
 const path = require('path');
+const items = require('./routes/itemsRoute');
+const users = require('./routes/usersRoute')
 require('./models/db');
 
 const app = express();
@@ -13,7 +16,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(require('cors')());
 app.use(require('helmet')());
-app.use('/api/items', require('./routes/items'));
+app.use('/api/items', items);
+app.use('/api/users', users);
 
 // Production
 if (process.env.NODE_ENV === 'production') {

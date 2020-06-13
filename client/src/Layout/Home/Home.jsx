@@ -72,7 +72,7 @@ class Home extends Component {
     if (this.state.error) return <h1>{this.state.error}</h1>;
     if (this.state.data !== null)
       if (!this.state.data.items.length)
-        return <h1 className='No-Items'>No Item(s)</h1>;
+        return <h1 className='No-ItemsRoute'>No Item(s)</h1>;
 
     return (
       <div className='Table-Wrapper'>
