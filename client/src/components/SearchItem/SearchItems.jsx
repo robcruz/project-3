@@ -6,7 +6,7 @@ class SearchItems extends Component {
 
     onChangeHandler = e => {
         this.setState({ value: e.target.value }, () => {
-            this.props.searchStudents(this.state.value);
+            this.props.searchItems(this.state.value);
         });
     }
 

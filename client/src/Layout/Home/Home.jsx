@@ -63,12 +63,12 @@ class Home extends Component {
     if (this.state.error) return <h1>{this.state.error}</h1>;
     if (this.state.data !== null)
       if (!this.state.data.items.length)
-        return <h1 className="No-Students">No Item(s)</h1>;
+        return <h1 className="No-Items">No Item(s)</h1>;
 
     return (
       <div className="Table-Wrapper">
         <h1>Check Out the Latest Deals, Here!</h1>
-        <SearchItems searchStudents={this.searchItems} />
+        <SearchItems searchItems={this.searchItems} />
         <table className="Table">
           <thead>
             <tr>
