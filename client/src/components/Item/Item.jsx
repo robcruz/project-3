@@ -1,7 +1,7 @@
 import React from 'react';
 import './Item.css';
 import { Link } from 'react-router-dom';
-import Avatar from 'react-avatar';
+// import Avatar from 'react-avatar';
 
 const Item = ({ _id, name, email, itemNumber, removeItem: removeItem }) => {
   return (
