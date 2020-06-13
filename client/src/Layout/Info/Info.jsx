@@ -16,44 +16,38 @@ export default props => (
 
     <Tabs>
       <div>
-        <Tab><button>About</button></Tab>
-        <Tab><button>Rules</button></Tab>
-        <Tab><button>Contact</button></Tab>
+        <Tab><button className="tab">About</button></Tab>
+        <Tab><button className="tab">Rules</button></Tab>
+        <Tab><button className="tab">Contact</button></Tab>
       </div>
 
 
       <Panel>
-
-        <h2>About SwapMe</h2>
-        <p className="info"> Swap Me Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-
+        <div className="infoContainer">
+        <h2 className="title">About SwapMe</h2>
+        <p className="info"> Swap Me is an application developed Aleksei Cruz, Rob Gaerlan, Kaden Maguglin, and Michael Myers. The purpose of this app is to provide an easy,
+         all in one solution to the bartering market. A direct, straight trade application, made for people to easily chat, and trade their items locally. </p>
+         </div>
 
       </Panel>
 
       <Panel>
 
         <h2>The Rules</h2>
-        <Collapsible className="infoheader" trigger=" Step 1: click on me ">
-          <p>This is the collapsible content. It can be any element or React component you like.</p>
-          <p>It can even be another Collapsible component. Check out the next section!</p>
+        <Collapsible className="infoheader" trigger=" POST ">
+          <p>Step one: go to the swap tab, and post your item. Make sure to include your email address so people know where to contact you!</p>
         </Collapsible>
 
         <br></br>
 
-        <Collapsible className="infoheader" trigger=" Step 2: click on me " bac>
-          <p>This is the collapsible content. It can be any element or React component you like.</p>
-          <p>It can even be another Collapsible component. Check out the next section!</p>
+        <Collapsible className="infoheader" trigger=" CHAT " >
+          <p>Step two: chat with someone who's interested in your item, here's where you decide what to trade for, and how to trade it!</p>
         </Collapsible>
 
         <br></br>
 
-        <Collapsible className="infoheader" trigger=" Step 3:  click on me ">
-          <p>This is the collapsible content. It can be any element or React component you like.</p>
-          <p>It can even be another Collapsible component. Check out the next section!</p>
+        <Collapsible className="infoheader" trigger=" TRADE ">
+          <p>Meet up and straight trade your items, maybe even make a new friend!</p>
         </Collapsible>
 
       </Panel>
@@ -61,10 +55,10 @@ export default props => (
       <Panel>
         <h2>Contact Us</h2>
         <form class="form">
-          <p type="Name:"><input placeholder="Write your name here.."></input></p>
-          <p type="Email:"><input placeholder="Let us know how to contact you back.."></input></p>
-          <p type="Message:"><input placeholder="What would you like to tell us.."></input></p>
-          <button className="Sendbtn">Send Message</button>
+          <p type="Name:"><input className="contactTab" placeholder="Write your name here.."></input></p>
+          <p type="Email:"><input  className="contactTab" placeholder="Let us know how to contact you back.."></input></p>
+          <p type="Message:"><input  className="contactTab" placeholder="What would you like to tell us.."></input></p>
+          <button className="sendTab">Send Message</button>
 
         </form>
 
