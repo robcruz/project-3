@@ -22,10 +22,10 @@ class AddItem extends Component {
         itemNumber: this.refs.itemNumber.value,
       });
 
-      toast(
-        'Item ' + newItem.data.newItem.name + ' Ready to be Swapped',
-        { type: toast.TYPE.SUCCESS, autoClose: 3000 }
-      );
+      toast('Item ' + newItem.data.newItem.name + ' Ready to be Swapped ', {
+        type: toast.TYPE.SUCCESS,
+        autoClose: 3000,
+      });
     } catch (err) {
       toast(err.message, { type: toast.TYPE.ERROR, autoClose: 3000 });
     }
@@ -38,22 +38,17 @@ class AddItem extends Component {
         <form onSubmit={this.addItem}>
           <label htmlFor='name'>Item Name</label>
           <input
-
             placeholder='Item for Swap'
-
             onChange={this.onChangeHandler}
             ref='name'
             className='Add-Item-Input'
             required
-
             maxLength='120'
             id='name'
           />
-          <label htmlFor='email'>
-            email:
-          </label>
+          <label htmlFor='email'>email:</label>
           <input
-
+            placeholder='Your Email'
             name='email'
             onChange={this.onChangeHandler}
             ref='email'
@@ -64,17 +59,15 @@ class AddItem extends Component {
           />
           <label htmlFor='itemNumber'>How Many Items... </label>
           <input
-            max='120'
+            placeholder='Number of item(s)'
+            max='10'
             onChange={this.onChangeHandler}
             ref='itemNumber'
             className='Add-Item-Input'
             required
             id='itemNumber'
           />
-          <button
-            type='submit'
-            className='Add-Item-Submit fa fa-plus'
-          ></button>
+          <button type='submit' className='Add-Item-Submit fa fa-plus'></button>
           <button
             type='reset'
             className='Add-Item-Reset fa fa-refresh'
