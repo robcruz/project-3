@@ -3,6 +3,7 @@ import './AddItem.css';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ChatIO from '../../components/Chat/ChatIO'
 
 class AddItem extends Component {
   state = {
