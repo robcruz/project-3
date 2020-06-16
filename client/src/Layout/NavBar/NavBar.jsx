@@ -6,7 +6,12 @@ const Home = () => {
   return (
     <nav className="NavBar-Wrapper">
       <div>
-        <h3 className="NavBar-Title">SwapMe Logo</h3>
+        <div id="box">
+          <p id="flashlight">
+            <span id="flash">Swap</span>
+            <span id="light">Me</span>
+          </p>
+        </div>
       </div>
       <div className="NavBar-Links">
         <Link to="/" className="NavBar-Link">Home</Link>
