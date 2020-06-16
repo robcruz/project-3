@@ -1,5 +1,8 @@
 const express = require('express');
 const socket = require('socket.io');
+const fileUpload = require('express-fileupload');
+
+const validateMiddleware = require("./middleware/validateMiddleware");
 
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -13,7 +16,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(require('cors')());
 app.use(require('helmet')());
+app.use(fileUpload());
 app.use('/api/items', require('./routes/items'));
+
+
+app.use('/posts/store',validateMiddleware)
+
 
 // Production
 if (process.env.NODE_ENV === 'production') {
