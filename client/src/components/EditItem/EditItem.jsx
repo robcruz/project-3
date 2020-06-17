@@ -48,7 +48,7 @@ class EditItem extends Component {
     return (
       <div className="Edit-Item-Wrapper">
         <h1>Edit Your Item</h1>
-        <form onSubmit={this.updateItemHandler}>
+        <form onSubmit={this.updateItemHandler} className="formContainerEdit">
           <label htmlFor="name">Item Name</label>
           <input
             type="text"
