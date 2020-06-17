@@ -5,6 +5,7 @@ import FilePondPluginImagePreview from "filepond-plugin-image-preview";
 import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
 import "filepond/dist/filepond.min.css";
 import { FilePond, registerPlugin } from 'react-filepond';
+import "./Upload.css";
 
 // Register the plugins
 registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview);
@@ -32,7 +33,8 @@ class Upload extends Component {
 
     render() {
         return (
-            <div className="App">
+            <div className="uploadContainer">
+            <div className="uploader">
 
                 <FilePond ref={ref => this.pond = ref}
                     files={this.state.files}
@@ -59,6 +61,7 @@ class Upload extends Component {
                     }}>
                 </FilePond>
 
+            </div>
             </div>
         );
     }

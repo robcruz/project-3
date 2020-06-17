@@ -75,7 +75,7 @@ class Home extends Component {
         return <h1 className='No-Items'>No Item(s)</h1>;
 
     return (
-      <div className='Table-Wrapper'>
+      <div className="homeTable">
         <h1>Check Out the Latest Deals, Here!</h1>
         <SearchItems searchItems={this.searchItems} />
         <table className='Table'>
