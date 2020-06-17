@@ -36,7 +36,7 @@ class AddItem extends Component {
         return (
             <div className='AddItem-Wrapper'>
                 <h1>Swap Your Item Here!</h1>
-                <form onSubmit={this.addItem}>
+                <form className="theform" onSubmit={this.addItem}>
                     <label htmlFor='name'>Item Name</label>
                     <input
                         placeholder='Item for Swap'
@@ -48,7 +48,7 @@ class AddItem extends Component {
                         id='name'
                     />
                     <label htmlFor='email'>email:</label>
-                    <input
+                    <input 
                         placeholder='Your Email'
                         name='email'
                         onChange={this.onChangeHandler}

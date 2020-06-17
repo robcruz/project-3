@@ -3,12 +3,20 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color:#d9d9d9;
+    border-radius:10px;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    max-width:980px;
+    margin-bottom:100px;
 }
 
 .Add-Item-Input {
     padding: 4px 11px;
-    width: 55vw;
     height: 32px;
+    
+    width:100%;
     font-size: 14px;
     line-height: 1.5;
     color: rgba(0, 0, 0, 0.65);
@@ -36,8 +44,16 @@
 
 .Add-Item-Reset {
     background-color: rgb(163, 163, 163);
+    margin-bottom:15px;
 }
 
 label {
     padding-left: 2%;
+}
+
+.theform{
+    
+    width:80%;
+    margin-left:auto;
+    margin-right:10%
 }

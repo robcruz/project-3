@@ -23,7 +23,7 @@ export default props => (
 
 
       <Panel>
-        <div className="infoContainer">
+        <div className="contactContainer">
         <h2 className="title">About SwapMe</h2>
         <p className="info"> Swap Me is an application developed Aleksei Cruz, Rob Gaerlan, Kaden Maguglin, and Michael Myers. The purpose of this app is to provide an easy,
          all in one solution to the bartering market. A direct, straight trade application, made for people to easily chat, and trade their items locally. </p>
@@ -32,28 +32,29 @@ export default props => (
       </Panel>
 
       <Panel>
-
-        <h2>The Rules</h2>
+        <div className="contactContainer">
+        <h2 className="contactTitle">The Rules</h2>
         <Collapsible className="infoheader" trigger=" POST ">
-          <p>Step one: go to the swap tab, and post your item. Make sure to include your email address so people know where to contact you!</p>
+          <p className="description">Step one: go to the swap tab, and post your item. Make sure to include your email address so people know where to contact you!</p>
         </Collapsible>
 
         <br></br>
 
         <Collapsible className="infoheader" trigger=" CHAT " >
-          <p>Step two: chat with someone who's interested in your item, here's where you decide what to trade for, and how to trade it!</p>
+          <p className="description">Step two: chat with someone who's interested in your item, here's where you decide what to trade for, and how to trade it!</p>
         </Collapsible>
 
         <br></br>
 
         <Collapsible className="infoheader" trigger=" TRADE ">
-          <p>Meet up and straight trade your items, maybe even make a new friend!</p>
+          <p className="description">Meet up and straight trade your items, maybe even make a new friend!</p>
         </Collapsible>
-
+        </div>
       </Panel>
 
       <Panel>
-        <h2>Contact Us</h2>
+        <div className="contactContainer">
+        <h2 className="contactTitle">Contact Us</h2>
         <form class="form">
           <p type="Name:"><input className="contactTab" placeholder="Write your name here.."></input></p>
           <p type="Email:"><input  className="contactTab" placeholder="Let us know how to contact you back.."></input></p>
@@ -61,7 +62,7 @@ export default props => (
           <button className="sendTab">Send Message</button>
 
         </form>
-
+        </div>
 
       </Panel>
 
