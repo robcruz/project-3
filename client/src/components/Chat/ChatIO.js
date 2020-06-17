@@ -44,7 +44,7 @@ class ChatIO extends React.Component {
                             <div className="card">
                                 <div className="card-body">
                                     <div className="card-title">SwapMe Chat</div>
-                                    <hr />
+                                    
                                     <div className="messages">
                                         {this.state.messages.map(message => {
                                             return (
@@ -59,7 +59,7 @@ class ChatIO extends React.Component {
                                     <br />
                                     <input type="text" placeholder="Message" className="form-control" value={this.state.message} onChange={ev => this.setState({ message: ev.target.value })} />
                                     <br />
-                                    <button onClick={this.sendMessage} className="btn btn-primary form-control">Send</button>
+                                    <button onClick={this.sendMessage} className="chatbtn">Send</button>
                                 </div>
                             </div>
                         </div>
