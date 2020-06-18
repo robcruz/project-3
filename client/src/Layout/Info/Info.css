@@ -16,9 +16,7 @@
     background: linear-gradient(90deg, rgba(154, 154, 154, 1) 87%, rgba(255, 255, 255, 0.9664453506469727) 100%);
 }
 
-.infoHeader{
-    
-}
+.infoHeader {}
 
 .title {
     text-align: center;
@@ -47,22 +45,26 @@
     margin-left: auto;
     margin-right: auto;
 }
-.contactContainer{
+
+.contactContainer {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     max-width: 980px;
-    margin-top:25px;
-    background-color:#d9d9d9;
+    margin-top: 25px;
+    background-color: #d9d9d9;
     border-radius: 10px;
-    padding-bottom:25px;
+    padding-bottom: 25px;
+    box-shadow: 6px 6px 10px -2px #a7a4a4;
 }
-.contactTitle{
-    text-align:center;
+
+.contactTitle {
+    text-align: center;
 }
+
 .form {
     width: 100%;
-    max-width:980px;
+    max-width: 980px;
 }
 
 .sendTab {
@@ -78,7 +80,7 @@
 .Collapsible {
     background-color: white;
     color: rgb(131, 131, 131);
-    border:2px solid rgb(131, 131, 131);
+    border: 2px solid rgb(131, 131, 131);
     border-radius: 10px;
     cursor: pointer;
     padding: 18px;
@@ -93,7 +95,7 @@
 .active,
 .Collapsible:hover {
     background-color: rgb(131, 131, 131);
-    color:white;
+    color: white;
 }
 
 .content {
@@ -111,8 +113,9 @@ h1 {
     -o-animation: fadeIn ease 3s;
     -ms-animation: fadeIn ease 3s;
 }
-.description{
-    font-size:25px;
+
+.description {
+    font-size: 25px;
 }
 
 @keyframes fadeIn {
