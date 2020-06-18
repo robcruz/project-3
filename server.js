@@ -25,9 +25,9 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-server = app.listen(PORT, () => console.log(`App running on port ${PORT}`)  );
+const server = app.listen(PORT, () => console.log(`App running on port ${PORT}`)  );
 
-io = socket(server);
+const io = socket(server);
 
 io.on('connection', (socket) => {
   console.log(socket.id);
