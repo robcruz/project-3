@@ -12,7 +12,7 @@ const Item = ({ _id, name, email, itemNumber, removeItem: removeItem }) => {
       <td>
         <button
           onClick={() => removeItem(_id)}
-          className='Action-Button fa fa-trash'
+          className='Trash-Button fa fa-trash'
         ></button>
         <Link to={{ pathname: '/edit', search: _id }}>
           <button className='Action-Button fa fa-eye'></button>
