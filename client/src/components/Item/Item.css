@@ -10,8 +10,10 @@
     outline: none;
 }
 .Action-Button:hover{
-    background-color:green;
+    background-color:#07BC0C;
     color: white;
+    width:45px;
+    height:45px;
 }
 
 .Trash-Button {
@@ -26,6 +28,8 @@
     outline: none;
 }
 .Trash-Button:hover{
-    background-color:red;
+    background-color:#E74C3C;
     color: white;
+    width:45px;
+    height:45px;
 }
