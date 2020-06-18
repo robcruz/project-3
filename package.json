@@ -1,7 +1,7 @@
 {
     "name": "swap-me",
     "version": "1.0.0",
-    "description": "",
+    "description": "UCLA Bootcamp Project 3",
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
