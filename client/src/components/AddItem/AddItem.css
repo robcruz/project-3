@@ -42,8 +42,6 @@
 }.Add-Item-Submit:hover{
     background-color:white;
     color: #3b3b3b;
-    height: 45px;
-    width:45px;
 }
 
 .Add-Item-Reset {
@@ -52,8 +50,6 @@
 }.Add-Item-Reset:hover{
     background-color:white;
     color:rgb(163, 163, 163);
-    height:45px;
-    width:45px;
 }
 
 label {

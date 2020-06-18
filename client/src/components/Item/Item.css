@@ -12,8 +12,6 @@
 .Action-Button:hover{
     background-color:#07BC0C;
     color: white;
-    width:45px;
-    height:45px;
 }
 
 .Trash-Button {
@@ -30,6 +28,4 @@
 .Trash-Button:hover{
     background-color:#E74C3C;
     color: white;
-    width:45px;
-    height:45px;
 }
