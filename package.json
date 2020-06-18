@@ -9,8 +9,6 @@
         "clean": "rm -rf build && mkdir build",
         "build-babel": "babel -d ./build ./src -s",
         "build": "npm run clean && npm run build-babel",
-        "client-install": "cd client && npm install",
-        "server": "nodemon server.js",
         "client": "npm start --prefix client",
         "dev": "concurrently \"npm run server\" \"npm run client\""
     },
