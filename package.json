@@ -4,7 +4,7 @@
     "description": "UCLA Bootcamp Project 3",
     "main": "server.js",
     "scripts": {
-        "start": "babel-node server.js",
+        "start": "node server.js",
         "heroku-postbuild": "cd client && npm install && npm run build",
         "clean": "rm -rf build && mkdir build",
         "build-babel": "babel -d ./build ./src -s",
