@@ -13,6 +13,7 @@
     margin-bottom: 50px;
     padding-bottom: 25px;
     padding-top: 10px;
+    background: radial-gradient(circle, rgb(199, 199, 199) 0%, rgba(255, 255, 255, 0.9664453506469727) 100%);
     box-shadow: 6px 6px 10px -2px #a7a4a4;
 }
 
