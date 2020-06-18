@@ -40,11 +40,17 @@
 
 .Add-Item-Submit {
     background-color: #3b3b3b;
+}.Add-Item-Submit:hover{
+    background-color:white;
+    color: #3b3b3b;
 }
 
 .Add-Item-Reset {
     background-color: rgb(163, 163, 163);
     margin-bottom: 15px;
+}.Add-Item-Reset:hover{
+    background-color:white;
+    color:rgb(163, 163, 163);
 }
 
 label {

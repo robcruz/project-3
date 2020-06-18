@@ -49,6 +49,9 @@ h1 {
     border-radius: 40px;
     cursor: pointer;
     outline: none;
+}.Edit-Item-Submit:hover{
+    background-color: blue;
+    color:white;
 }
 
 .chatcontainer {
