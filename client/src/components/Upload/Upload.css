@@ -1,15 +1,16 @@
-.uploadContainer{
-    width:80%;
-    margin-left:auto;
-    margin-right:auto;
+.uploadContainer {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 980px;
-    background-color:#d9d9d9;
-    border-radius:10px;
-    margin-top:20px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 6px 6px 10px -2px #a7a4a4;
 }
 
-.uploader{
-    width:80%;
-    margin-left:auto;
-    margin-right:auto;
+.uploader {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
