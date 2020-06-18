@@ -50,8 +50,10 @@ h1 {
     cursor: pointer;
     outline: none;
 }.Edit-Item-Submit:hover{
-    background-color: blue;
+    background-color: #3498DB;
     color:white;
+    width: 45px;
+    height: 45px;
 }
 
 .chatcontainer {
