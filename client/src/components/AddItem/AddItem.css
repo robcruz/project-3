@@ -25,6 +25,8 @@
     border: 1px solid #d9d9d9;
     border-radius: 4px;
     outline: none;
+    border-style: solid 2px;
+    border-top-color: rgb(110, 110, 110);
 }
 
 .Add-Item-Submit,
