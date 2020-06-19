@@ -11,7 +11,7 @@
     max-width: 980px;
     margin-bottom: 100px;
     background: radial-gradient(circle, rgb(199, 199, 199) 0%, rgba(255, 255, 255, 0.9664453506469727) 100%);
-    box-shadow: 6px 6px 10px -2px #a7a4a4;
+    box-shadow: 6px 6px 10px -2px #8b8b8b;
 }
 
 .Add-Item-Input {
@@ -68,4 +68,15 @@ label {
     width: 80%;
     margin-left: auto;
     margin-right: 10%
+}
+
+.BG {
+    background-color: rgb(243, 243, 243);
+    width: 80%;
+    height: 80%;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
 }
