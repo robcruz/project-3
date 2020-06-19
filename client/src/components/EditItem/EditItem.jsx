@@ -46,49 +46,51 @@ class EditItem extends Component {
     if (this.state.response === "Item not Found")
       return <h1>Item Not Found!</h1>
     return (
-      <div className="Edit-Item-Wrapper">
-        <h1>Edit Your Item</h1>
-        <form onSubmit={this.updateItemHandler} className="formContainerEdit">
-          <label htmlFor="name">Item Name</label>
-          <input
-            type="text"
-            placeholder="Name..."
-            value={this.state.name}
-            name="name"
-            onChange={this.onChangeHandler}
-            ref="name"
-            required
-            className="Edit-Item-Input"
-            id="name"
+      <div className="BG">
+        <div className="Edit-Item-Wrapper">
+          <h1>Edit Your Item</h1>
+          <form onSubmit={this.updateItemHandler} className="formContainerEdit">
+            <label htmlFor="name">Item Name</label>
+            <input
+              type="text"
+              placeholder="Name..."
+              value={this.state.name}
+              name="name"
+              onChange={this.onChangeHandler}
+              ref="name"
+              required
+              className="Edit-Item-Input"
+              id="name"
 
-          />
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            placeholder="Enter your email here"
-            value={this.state.email}
-            name="email"
-            required
-            onChange={this.onChangeHandler}
-            ref="email"
-            className="Edit-Item-Input"
-            id="email"
-          />
-          <label htmlFor="itemNumber">Item Count:</label>
-          <input
-            type="text"
-            placeholder="Enter item count here"
-            value={this.state.itemNumber}
-            name="itemNumber"
-            required
-            onChange={this.onChangeHandler}
-            ref="itemNumber"
-            className="Edit-Item-Input"
-            id="email"
-          />
-          <button type="submit" className="Edit-Item-Submit fa fa-pencil"></button>
-        </form>
-        <ToastContainer />
+            />
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              placeholder="Enter your email here"
+              value={this.state.email}
+              name="email"
+              required
+              onChange={this.onChangeHandler}
+              ref="email"
+              className="Edit-Item-Input"
+              id="email"
+            />
+            <label htmlFor="itemNumber">Item Count:</label>
+            <input
+              type="text"
+              placeholder="Enter item count here"
+              value={this.state.itemNumber}
+              name="itemNumber"
+              required
+              onChange={this.onChangeHandler}
+              ref="itemNumber"
+              className="Edit-Item-Input"
+              id="email"
+            />
+            <button type="submit" className="Edit-Item-Submit fa fa-pencil"></button>
+          </form>
+          <ToastContainer />
+        </div>
       </div>
     );
   }

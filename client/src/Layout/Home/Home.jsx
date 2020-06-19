@@ -75,22 +75,24 @@ class Home extends Component {
         return <h1 className='No-Items'>No Item(s)</h1>;
 
     return (
-      <div className="homeTable">
-        <h1>Check Out the Latest Deals, Here!</h1>
-        <hr></hr>
-        <hr></hr>
-        <SearchItems searchItems={this.searchItems} />
-        <table className='Table'>
-          <thead>
-            <tr>
-              <th>Item Name</th>
-              <th>Email</th>
-              <th>Number of Item(s)</th>
-              <th>Options</th>
-            </tr>
-          </thead>
-          <tbody>{items}</tbody>
-        </table>
+      <div className="BG">
+        <div className="homeTable">
+          <h1>Check Out the Latest Deals, Here!</h1>
+          <hr></hr>
+          <hr></hr>
+          <SearchItems searchItems={this.searchItems} />
+          <table className='Table'>
+            <thead>
+              <tr>
+                <th>Item Name</th>
+                <th>Email</th>
+                <th>Number of Item(s)</th>
+                <th>Options</th>
+              </tr>
+            </thead>
+            <tbody>{items}</tbody>
+          </table>
+        </div>
       </div>
     );
   }

@@ -34,48 +34,50 @@ class AddItem extends Component {
 
     render() {
         return (
-            <div className='AddItem-Wrapper'>
-                <h1>Swap Your Item Here!</h1>
-                <hr></hr>
-                <form className="theform" onSubmit={this.addItem}>
-                    <label htmlFor='name'>Item Name</label>
-                    <input
-                        placeholder='Item for Swap'
-                        onChange={this.onChangeHandler}
-                        ref='name'
-                        className='Add-Item-Input'
-                        required
-                        maxLength='120'
-                        id='name'
-                    />
-                    <label htmlFor='email'>email:</label>
-                    <input
-                        placeholder='Your Email'
-                        name='email'
-                        onChange={this.onChangeHandler}
-                        ref='email'
-                        pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
-                        className='Add-Item-Input'
-                        required
-                        id='email'
-                    />
-                    <label htmlFor='itemNumber'>How Many Items... </label>
-                    <input
-                        placeholder='Number of item(s)'
-                        max='10'
-                        onChange={this.onChangeHandler}
-                        ref='itemNumber'
-                        className='Add-Item-Input'
-                        required
-                        id='itemNumber'
-                    />
-                    <button type='submit' className='Add-Item-Submit fa fa-plus'></button>
-                    <button
-                        type='reset'
-                        className='Add-Item-Reset fa fa-refresh'
-                    ></button>
-                </form>
-                <ToastContainer />
+            <div className="BG">
+                <div className='AddItem-Wrapper'>
+                    <h1>Swap Your Item Here!</h1>
+                    <hr></hr>
+                    <form className="theform" onSubmit={this.addItem}>
+                        <label htmlFor='name'>Item Name</label>
+                        <input
+                            placeholder='Item for Swap'
+                            onChange={this.onChangeHandler}
+                            ref='name'
+                            className='Add-Item-Input'
+                            required
+                            maxLength='120'
+                            id='name'
+                        />
+                        <label htmlFor='email'>email:</label>
+                        <input
+                            placeholder='Your Email'
+                            name='email'
+                            onChange={this.onChangeHandler}
+                            ref='email'
+                            pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
+                            className='Add-Item-Input'
+                            required
+                            id='email'
+                        />
+                        <label htmlFor='itemNumber'>How Many Items... </label>
+                        <input
+                            placeholder='Number of item(s)'
+                            max='10'
+                            onChange={this.onChangeHandler}
+                            ref='itemNumber'
+                            className='Add-Item-Input'
+                            required
+                            id='itemNumber'
+                        />
+                        <button type='submit' className='Add-Item-Submit fa fa-plus'></button>
+                        <button
+                            type='reset'
+                            className='Add-Item-Reset fa fa-refresh'
+                        ></button>
+                    </form>
+                    <ToastContainer />
+                </div>
             </div>
         );
     }
