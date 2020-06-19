@@ -73,6 +73,7 @@ class EditItem extends Component {
               onChange={this.onChangeHandler}
               ref="email"
               className="Edit-Item-Input"
+              disabled
               id="email"
             />
             <label htmlFor="itemNumber">Item Count:</label>

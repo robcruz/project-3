@@ -20,6 +20,7 @@ export default props => (
         <Tab><button className="tab">About</button></Tab>
         <Tab><button className="tab">Rules</button></Tab>
         <Tab><button className="tab">Contact</button></Tab>
+        <Tab><button className="tab">Report</button></Tab>
       </div>
 
 
