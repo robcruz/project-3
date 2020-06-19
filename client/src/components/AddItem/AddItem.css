@@ -10,6 +10,7 @@
     margin-right: auto;
     max-width: 980px;
     margin-bottom: 100px;
+    background: radial-gradient(circle, rgb(199, 199, 199) 0%, rgba(255, 255, 255, 0.9664453506469727) 100%);
     box-shadow: 6px 6px 10px -2px #a7a4a4;
 }
 
@@ -37,19 +38,24 @@
     cursor: pointer;
     outline: none;
 }
+
 .Add-Item-Submit {
     background-color: #3b3b3b;
-}.Add-Item-Submit:hover{
-    background-color:white;
+}
+
+.Add-Item-Submit:hover {
+    background-color: white;
     color: #3b3b3b;
 }
 
 .Add-Item-Reset {
     background-color: rgb(163, 163, 163);
     margin-bottom: 15px;
-}.Add-Item-Reset:hover{
-    background-color:white;
-    color:rgb(163, 163, 163);
+}
+
+.Add-Item-Reset:hover {
+    background-color: white;
+    color: rgb(163, 163, 163);
 }
 
 label {

@@ -77,6 +77,8 @@ class Home extends Component {
     return (
       <div className="homeTable">
         <h1>Check Out the Latest Deals, Here!</h1>
+        <hr></hr>
+        <hr></hr>
         <SearchItems searchItems={this.searchItems} />
         <table className='Table'>
           <thead>

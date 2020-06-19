@@ -36,6 +36,7 @@ class AddItem extends Component {
         return (
             <div className='AddItem-Wrapper'>
                 <h1>Swap Your Item Here!</h1>
+                <hr></hr>
                 <form className="theform" onSubmit={this.addItem}>
                     <label htmlFor='name'>Item Name</label>
                     <input
