@@ -2,6 +2,8 @@
 
 This is a simple crud project for beginners built with the following technologies:
 
+https://salty-shelf-94412.herokuapp.com/
+
 - [React](https://facebook.github.io/react/) and [React Router](https://reacttraining.com/react-router/) for the frontend
 - [Express](http://expressjs.com/) and [Mongoose](http://mongoosejs.com/) for the backend
 
